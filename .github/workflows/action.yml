@@ -1,0 +1,15 @@
+name: Find msgfmt
+
+on:
+    workflow_dispatch:
+
+defaults:
+    run:
+        shell: cmd
+
+jobs:
+    find-msgfmt:
+        runs-on: windows-2019
+        steps:
+            - name: Find msgfmt
+              run: sh -c where msgfmt
